@@ -8,4 +8,4 @@ def lotto(request):
     lotto_num = random.sample(pull_num, 6)
     print(lotto_num)
 
-    return HttpResponse(lotto_num)
+    return render(request, 'lotto.html', {'lotto_num': lotto_num})
